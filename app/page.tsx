@@ -25,8 +25,8 @@ export default function HomePage() {
       <SiteHeader />
       <main id="hero">
         <Hero />
-        <CurrentFocus />
         <FeaturedProject project={featured} />
+        <CurrentFocus />
         <section className="section shell selected-work" aria-labelledby="selected-work-title">
           <div className="section-intro"><Reveal><SectionLabel>SELECTED WORK</SectionLabel><h2 id="selected-work-title">Selected work showing how I work.</h2><p>Each project is read as a trail of decisions, limitations, and learning, not a catalog of perfection.</p></Reveal></div>
           <div className="project-list">{selectedProjects.map((project, index) => <ProjectRow key={project.slug} project={project} index={index} />)}</div>

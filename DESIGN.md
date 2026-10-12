@@ -40,6 +40,8 @@ Use rules, whitespace, and one dark contact block instead of floating cards. No 
 - Selected work uses editorial rows. Experience uses chronology. Thinking and process use dividers rather than equal cards.
 - No decorative overlaps. Every image, diagram, and text block owns a clear spatial zone.
 - Below 768px, collapse to one column, preserve the narrative order, and prevent horizontal overflow.
+- Spacing follows a practical golden-ratio rhythm: 4, 8, 13, 21, 34, 55, 89, and 144px.
+- Priority layouts use a 61.8/38.2 split; repeated equal-priority items remain balanced rather than being forced into unequal columns.
 
 ## 6. Motion & Interaction
 

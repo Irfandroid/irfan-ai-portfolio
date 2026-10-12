@@ -40,9 +40,11 @@ Use one accent only. Never add neon, purple, gradients, clay shadows, pure black
 - Use an asymmetric grid inside a centered shell capped at 1400px.
 - The hero is a publication spread: specific role direction and value proposition on the left; the supplied real portrait and concise facts on the right.
 - Qalbu is the lead technical story. Selected work uses evidence-rich rows, not a gallery of equal cards.
-- Use a 4px spacing base, with section rhythm in the 32–96px range.
+- Use a 4px spacing base, extended by the documented golden-ratio rhythm for section spacing.
 - Below 768px, collapse to one column, keep narrative order, and preserve readable measures. No horizontal overflow.
 - Every visual owns a clear spatial zone; avoid decorative overlaps and absolute-positioned content stacks.
+- Extend the 4px base into a practical golden-ratio rhythm: 4, 8, 13, 21, 34, 55, 89, and 144px.
+- Use 1.618fr/1fr proportions for priority compositions; keep equal-priority process and principle grids balanced.
 
 ## Component rules
 
