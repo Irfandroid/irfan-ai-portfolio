@@ -331,6 +331,9 @@ h1 em { color: var(--accent); font-family: var(--display), Arial, sans-serif; fo
 .hero-body { max-width: 580px; }
 .hero-value { border-left-color: var(--accent); max-width: 540px; }
 .hero-actions, .contact-links { gap: 18px; margin-top: 38px; }
+.hero-socials { align-items: center; display: flex; flex-wrap: wrap; gap: 18px; margin-top: 24px; }
+.hero-socials a { align-items: center; color: var(--muted); display: inline-flex; font-family: var(--mono), monospace; font-size: 10px; gap: 7px; letter-spacing: .04em; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.hero-socials a:hover { color: var(--accent); }
 .button { border-radius: 2px; box-shadow: none; font-size: 12px; min-height: 44px; padding: 0 16px; }
 .button-primary { background: var(--ink); border: 1px solid var(--ink); box-shadow: none; color: var(--surface); }
 .button-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
@@ -378,6 +381,7 @@ h1 em { color: var(--accent); font-family: var(--display), Arial, sans-serif; fo
 .technical-decision, .failure-study, .architecture-flow { background: transparent; border: 1px solid var(--line); border-radius: 0; box-shadow: none; }
 .architecture-flow span { background: transparent; border-radius: 0; }
 .site-footer { border-top-color: var(--line); }
+#skills, #education { scroll-margin-top: 96px; }
 
 @media (max-width: 900px) {
   .hero { min-height: auto; }
@@ -396,6 +400,7 @@ h1 em { color: var(--accent); font-family: var(--display), Arial, sans-serif; fo
   .contact-copy { padding: 28px 22px; }
   .contact-links { align-items: flex-start; flex-direction: column; }
   .contact-links .button, .contact-links .text-link { width: fit-content; }
+  .hero-socials { align-items: flex-start; flex-direction: column; gap: 14px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

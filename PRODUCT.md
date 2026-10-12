@@ -33,6 +33,7 @@ Irfan builds data-informed AI systems that are understandable, testable, and gro
 
 - Use English for the primary portfolio narrative, with established technical terms kept in their standard industry form.
 - Preserve the existing project evidence and repository links.
+- Offer email and WhatsApp as direct recruiter contact routes using the owner-supplied details.
 - The CV is a public download only; there is no visitor-facing upload or edit control. The owner updates the source file and redeploys it.
 
 ## Reference library

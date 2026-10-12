@@ -52,7 +52,7 @@ Use rules, whitespace, and one dark contact block instead of floating cards. No 
 
 - Next.js App Router with static export. Server Components by default; header and reveal wrapper are the only interaction layers.
 - `content/projects/*.mdx` holds case-study evidence. `data/*.ts` holds stable site, experience, principles, and process copy.
-- Primary navigation remains Work, Thinking, About, and Contact. Experience and `#process` remain available as deeper paths from the page.
+- Primary navigation follows the recruiter scan path: Work, Skills, Experience, Education, About, and Contact. Thinking and process remain available as deeper paths from the page.
 - Qalbu preserves the public repository truth and its safety boundary: not therapy, diagnosis, fatwa, or a replacement for trusted people or professionals.
 
 ## 8. Anti-Patterns (Banned)

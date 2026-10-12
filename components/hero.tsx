@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Download } from "lucide-react";
+import { ArrowUpRight, Download, Github, Linkedin, Mail, MessageCircle } from "lucide-react";
 import { site } from "@/data/site";
 import { Reveal } from "./reveal";
 
@@ -17,6 +17,12 @@ export function Hero() {
           <div className="hero-actions">
             <Link href="/work/qalbu/" className="button button-primary">View Qalbu case study <ArrowUpRight size={16} /></Link>
             <a href="/cv/muhamad-irfan-afriyansyah-cv.pdf" className="text-link" download><Download size={16} /> Download CV</a>
+          </div>
+          <div className="hero-socials" aria-label="Contact and social links">
+            <a href={site.links.whatsapp} target="_blank" rel="noreferrer"><MessageCircle size={15} /> WhatsApp</a>
+            <a href={site.links.email}><Mail size={15} /> Email</a>
+            <a href={site.links.github} target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>
+            <a href={site.links.linkedin} target="_blank" rel="noreferrer"><Linkedin size={15} /> LinkedIn</a>
           </div>
         </Reveal>
       </div>

@@ -52,7 +52,8 @@ Use one accent only. Never add neon, purple, gradients, clay shadows, pure black
 - **Project evidence:** prefer real portrait, authored SVG diagrams, repository-backed proof strips, MDX case studies, limitations, and next steps.
 - **Hero artifact:** use the supplied portrait and clear role facts; project diagrams belong to project sections.
 - **CV control:** one public PDF download; the owner edits the source file and redeploys it.
-- **Navigation:** stable desktop links plus a keyboard-usable mobile menu.
+- **Navigation:** stable recruiter-scan links for Work, Skills, Experience, Education, About, and Contact, plus a keyboard-usable mobile menu.
+- **Contact conversion:** email remains primary; WhatsApp is a direct secondary route using the owner-supplied number.
 
 ## Interaction and motion
 

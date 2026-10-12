@@ -6,7 +6,9 @@ export const site = {
   description: "A recruiter-focused portfolio of AI engineering work, with Qalbu as the primary case study in retrieval, RAG, and dependable LLM applications.",
   navigation: [
     { label: "Work", href: "#work" },
-    { label: "Thinking", href: "#thinking" },
+    { label: "Skills", href: "#skills" },
+    { label: "Experience", href: "#experience" },
+    { label: "Education", href: "#education" },
     { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" },
   ],
