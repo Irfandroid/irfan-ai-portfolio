@@ -1,0 +1,111 @@
+---
+title: "Qalbu"
+slug: "qalbu"
+status: "WORK IN PROGRESS"
+year: "2026"
+featured: true
+summary: "An Indonesian Qur'an reflection chat that tries to respond with visible sources, honest boundaries, and a way forward when context is not enough."
+role:
+  - "Project owner"
+  - "Technical direction documented"
+repository: "https://github.com/Irfandroid/qalbu-rag"
+technologies:
+  - "Python"
+  - "FastAPI"
+  - "RAG"
+  - "Jina embeddings"
+  - "Gemini"
+  - "Quality gate"
+cover: "/images/projects/qalbu/cover.svg"
+order: 1
+---
+
+## Context
+
+Qalbu began with a deeply human situation: someone writes about their emotional state and hopes for a space for reflection that does not feel like a search engine. Its public repository describes Qalbu as an Indonesian Qur'an reflection chat: not a diagnosis, therapy, fatwa, or replacement for trusted people and professionals.
+
+The important part of this project is not a claim that the system is finished. Its status remains MVP / work in progress. What makes it interesting is how an emotional need forces technical decisions to become more responsible.
+
+## Human context
+
+When someone arrives with fragile words, an answer that sounds convincing may not be helpful. The system needs to know where its context comes from, when context is insufficient, and how to say “I do not have enough evidence yet” without pretending.
+
+I assess the system through three questions:
+
+- **Capability:** can the pipeline find relevant verses?
+- **Benefit:** is the response directed at helping rather than taking over a decision?
+- **Transparency:** are sources, limitations, and fallbacks visible?
+
+## Technical question
+
+How do we keep a reflection flow grounded when the input is emotional, the corpus is single-language, and answer quality depends on retrieval without an automated evaluation dashboard?
+
+## Constraints
+
+The technical facts below come from the current public repository README. I do not claim specific team contributions beyond what is documented.
+
+- One language: Indonesian.
+- One corpus: Indonesian Quran.
+- Active corpus: `qalbu-seed-v1`, with provenance from the LPMQ Ministry of Religious Affairs portal.
+- One embedding provider: Jina.
+- One LLM provider: Gemini.
+- No reranker or second corpus in the MVP.
+- Conversations are not stored; TTL cache is process-local.
+- No auth, history, feedback, export, evaluation dashboard, or English corpus yet.
+
+## Approach
+
+I read Qalbu as a sequence of inspectable decisions, not a black box. The query is normalized, converted into an embedding, searched in a vector store, then paired with parent-verse context under strict limits. At the end, a citation / quality gate and fallback handle low scores or outputs that are not grounded.
+
+<ArchitectureFlow steps={["Indonesian input", "Safety check", "Jina query embedding", "Vector search", "Parent verse", "Gemini JSON", "Quality gate", "Reflection + citation"]} />
+
+## Architecture
+
+The current README names Supabase pgvector for retrieval storage, Gemini for structured generation, and FastAPI as the API interface. This portfolio does not use Supabase, a database, Prisma, or Qalbu credentials; those details are described only as part of the referenced repository.
+
+<NotebookArtifact />
+
+## Technical decisions
+
+<TechnicalDecision
+  problem="Emotional input can produce empty retrieval or context that is too far from the user's intent."
+  decision="Add a deterministic safety check, retrieval threshold, deduplication, and honest fallback before answering."
+  reason="A reflection system should be able to limit itself when evidence is insufficient."
+  tradeoff="Coverage can feel narrower; some inputs will not receive a complete generative answer."
+/>
+
+<TechnicalDecision
+  problem="A generative model may add details that are not present in the source."
+  decision="Send limited context and validate the structured Gemini response with a citation / quality gate."
+  reason="The LLM is limited to composing reflection, not creating verses, translations, verse numbers, or citations."
+  tradeoff="Output format is more rigid and requires more fallback conditions to maintain."
+/>
+
+## Implementation notes
+
+The documented endpoints are `GET /api/health` and `POST /api/v1/chat`. The response exposes retrieval-line text, Arabic, translation, tafsir, and provenance according to the available sources. At the current repository snapshot, `tests/` contains 52 Pytest test functions covering safety, retrieval, citations, response quality, API behavior, providers, and frontend history. The README also documents SSE mode, retrieval threshold, deduplication, provenance, fallback, structured Gemini, API SSE, and configuration checks.
+
+I intentionally do not add claims about accuracy, evaluation scores, user volume, or runtime screenshots. The visual artifact on this page is an editorial diagram, not a product screenshot.
+
+## What worked
+
+- Provider and corpus boundaries make the problem space clearer.
+- Fallback and provenance are treated as part of the experience, not errors to hide.
+- The JSON contract creates a checkpoint before the response reaches the user.
+- A deterministic safety check keeps sensitive decisions from being fully delegated to the model.
+
+## What is still unfinished
+
+The repository still names several areas that are unfinished or not automated: coverage and relevance depend on the corpus and embedding, there is no automated evaluation dashboard, crisis contacts need verification before a public deploy, and provider latency remains a boundary.
+
+This is not a list of bugs I found independently. These are limitations visible in public sources and therefore areas for the next experiments.
+
+<FailureStudy items={[{ problem: "Relevance can drop on ambiguous input", cause: "Corpus coverage and embeddings determine the distance between emotional language and the verses retrieved.", experiment: "Build an Indonesian evaluation set with relevance labels and measure the threshold explicitly." }, { problem: "Provider latency can disrupt the rhythm of reflection", cause: "Embedding and generation depend on external services.", experiment: "Record latency per stage and test a fallback that gives faster feedback without pretending the work is complete." }, { problem: "Metadata quality is not automatically visible", cause: "The MVP does not yet have an evaluation dashboard.", experiment: "Add lightweight tracing for provenance, score, fallback reason, and coverage." }]} />
+
+## Reflection
+
+Qalbu shows that trust is not a copy layer placed on top of a system. It comes from visible small decisions: which sources are used, what is rejected, when the model is not given authority, and how the system acknowledges its limitations.
+
+## Next steps
+
+The next step is not to scale the model first. I will prioritize an evaluation set, retrieval relevance measurement, crisis-path verification, latency observability, and clearer contribution documentation. Successful patterns will be tested in a new context before being developed further.

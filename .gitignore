@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.playwright-cli/
+output/playwright/
+.openai/
+output/
+*.tsbuildinfo
+.DS_Store
+
+.vercel

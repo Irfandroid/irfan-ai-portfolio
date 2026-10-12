@@ -1,0 +1,40 @@
+---
+title: "Dataset Label Analyzer"
+slug: "dataset-label-analyzer"
+status: "EXPERIMENT"
+year: "2023"
+featured: false
+summary: "A Streamlit application for inspecting dataset label health through summaries, distributions, visualizations, and inconsistent-label detection."
+role:
+  - "Project owner / public repository"
+repository: "https://github.com/Irfandroid/dataset-label-analyzer"
+technologies:
+  - "Python"
+  - "Streamlit"
+  - "Pandas"
+  - "Plotly"
+  - "RapidFuzz"
+cover: "/images/projects/dataset-label-analyzer/cover.svg"
+order: 3
+---
+
+## Context
+
+Labels that look “clean” are not necessarily consistent. Dataset Label Analyzer is a small Streamlit application for uploading a CSV, reviewing dataset summaries and label distributions, exploring Plotly visualizations, and finding inconsistencies with RapidFuzz.
+
+## Technical question
+
+How can label-quality problems become visible quickly enough for someone to decide what needs deeper inspection?
+
+## Technical decision
+
+<TechnicalDecision
+  problem="Label inspection often stops at frequency counts."
+  decision="Combine summary, distribution, interactive visualization, and fuzzy matching in one exploration flow."
+  reason="Data quality needs several complementary signals, not a single number."
+  tradeoff="Fuzzy matching can find similar candidates, but a human still needs to review them before normalization."
+/>
+
+## Reflection
+
+This small project reinforced my belief that a good data pipeline should make uncertainty visible. Before a model becomes smarter, its input must be open to questioning.

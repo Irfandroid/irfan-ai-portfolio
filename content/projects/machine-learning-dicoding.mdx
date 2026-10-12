@@ -1,0 +1,39 @@
+---
+title: "Image Classification: Rock Paper Scissors"
+slug: "machine-learning-dicoding"
+status: "EXPERIMENT"
+year: "2022"
+featured: false
+summary: "A TensorFlow image-classification experiment for recognizing rock, paper, and scissors hand shapes."
+role:
+  - "Project owner / public repository"
+repository: "https://github.com/Irfandroid/Machine-Learning-Dicoding"
+technologies:
+  - "Python"
+  - "Jupyter Notebook"
+  - "TensorFlow"
+  - "Image classification"
+cover: "/images/projects/machine-learning-dicoding/cover.svg"
+order: 4
+---
+
+## Context
+
+This repository documents a Digitalent FGA Dicoding project assignment for classifying images of rock, paper, and scissors hand shapes.
+
+## What I learned
+
+An experiment like this gives a concrete shape to the machine-learning loop: prepare data, train a classifier, then see whether the learned visual representation can distinguish the classes. I do not add performance details or final configuration here because they are not summarized in the public README.
+
+## Technical decision
+
+<TechnicalDecision
+  problem="Three visual classes can vary in pose, lighting, and background."
+  decision="Use TensorFlow in a structured notebook as an easy-to-repeat experimentation space."
+  reason="A notebook makes the connection between data, training, and results easier to observe while learning."
+  tradeoff="A notebook is not production automation; reproducibility and deployment require further work."
+/>
+
+## Reflection
+
+I keep this project as an early piece of evidence: not because the problem is the most complex, but because it shows the starting point of a journey from a model that works in a notebook toward systems that can be trusted in the real world.
