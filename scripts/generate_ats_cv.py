@@ -55,18 +55,18 @@ small = ParagraphStyle(
 
 story = [
     Paragraph("Muhamad Irfan Afriyansyah", name),
-    Paragraph("AI Engineer | Machine Learning | RAG and LLM Applications", headline),
+    Paragraph("AI Engineer | Retrieval Systems | LLM Applications", headline),
     Paragraph(
-        "Tangerang, Indonesia | mirfana141@gmail.com | linkedin.com/in/muhirfanaf | github.com/Irfandroid | irfandroid.vercel.app",
+        "Tangerang, Indonesia | mirfana141@gmail.com | linkedin.com/in/muhirfanaf | github.com/Irfandroid | irfan-ai-portfolio.vercel.app",
         contact,
     ),
     Paragraph("Professional Summary", section),
     p(
-        "AI Engineer focused on applied machine learning, retrieval-augmented generation, and LLM applications. Builds inspectable AI systems with Python, FastAPI, vector retrieval, and structured generation. Transitioning from data annotation into AI engineering, with Qalbu as the primary case study for safety checks, retrieval, citations, and honest fallback behavior. Interested in AI Engineer, LLM Engineer, and GenAI Engineer roles.",
+        "AI Engineer focused on RAG, retrieval systems, LLM applications, evaluation, and reliable AI systems. Builds inspectable applications that connect data, vector retrieval, APIs, structured generation, testing, and fallback behavior. Transitioning from data annotation and machine learning training into AI engineering, with Qalbu as the primary case study. Interested in AI Engineer, LLM Engineer, and GenAI Engineer roles.",
         body,
     ),
     Paragraph("Technical Skills", section),
-    p("Languages: Python, JavaScript\nAI and LLM: retrieval-augmented generation (RAG), vector search, Jina embeddings (768 dimensions), Gemini structured JSON\nBackend and data: FastAPI, Supabase pgvector, Server-Sent Events (SSE)\nReliability and testing: safety guardrails, citation and provenance validation, quality gates, fallback handling, Pytest, API/retrieval/response-quality tests", body),
+    p("AI / ML: Python, machine learning, retrieval-augmented generation (RAG), retrieval systems, embeddings, vector search, evaluation\nEngineering: FastAPI, REST APIs, Git, testing, Server-Sent Events (SSE)\nReliability: safety boundaries, provenance and citation validation, quality gates, fallback handling, technical documentation\nTools: Supabase pgvector, Jina embeddings (768 dimensions), Gemini structured JSON, Pytest", body),
     Paragraph("Professional Experience", section),
     KeepTogether([
         p("Machine Learning Intern | FlyRank AI", role),
