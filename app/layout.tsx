@@ -7,7 +7,7 @@ const geist = Geist({ variable: "--font-geist", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 const instrumentSerif = Instrument_Serif({ variable: "--font-instrument-serif", subsets: ["latin"], weight: "400" });
 
-const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://irfan-ai-portfolio.vercel.app");
+const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://irfandroid.vercel.app");
 
 export const metadata: Metadata = {
   metadataBase,

@@ -57,7 +57,7 @@ story = [
     Paragraph("Muhamad Irfan Afriyansyah", name),
     Paragraph("AI Engineer | Retrieval Systems | LLM Applications", headline),
     Paragraph(
-        "Tangerang, Indonesia | mirfana141@gmail.com | linkedin.com/in/muhirfanaf | github.com/Irfandroid | irfan-ai-portfolio.vercel.app",
+        "Tangerang, Indonesia | mirfana141@gmail.com | linkedin.com/in/muhirfanaf | github.com/Irfandroid | irfandroid.vercel.app",
         contact,
     ),
     Paragraph("Professional Summary", section),
