@@ -28,7 +28,7 @@ export function Hero() {
       </div>
       <Reveal className="hero-visual" delay={0.1} direction="right">
         <div className="hero-workspace">
-          <Image src="/images/profile/irfan-profile.png" alt="Portrait of Muhamad Irfan Afriyansyah" fill priority sizes="(max-width: 900px) 100vw, 520px" />
+          <Image src="/images/profile/irfan-profile.png" alt="Portrait of Muhamad Irfan Afriyansyah" fill preload sizes="(max-width: 900px) 100vw, 520px" />
         </div>
         <div className="hero-facts">
           <div><span>Based in</span><strong>Tangerang, Indonesia</strong></div>

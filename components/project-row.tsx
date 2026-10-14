@@ -13,6 +13,7 @@ export function ProjectRow({ project, index }: { project: ProjectFrontmatter; in
         <h3>{project.title}</h3>
         <p>{project.summary}</p>
         <p className="project-role">{project.role.join(" / ")}</p>
+        <p className="project-tech">{project.technologies.join(" · ")}</p>
         <div className="project-links">
           <Link className="arrow-link" href={`/work/${project.slug}`}>Read case study <ArrowUpRight size={16} /></Link>
           <a className="text-link" href={project.repository} target="_blank" rel="noreferrer"><Github size={15} /> GitHub</a>

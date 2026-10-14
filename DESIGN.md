@@ -25,7 +25,7 @@ Use rules, whitespace, and one dark contact block instead of floating cards. No 
 
 ## 4. Component Stylings
 
-- **Buttons:** One Burnt Clay primary CTA with white text, plus quiet text links. Use short color/transform transitions and tactile press feedback. No glow.
+- **Buttons:** One Charcoal Ink primary CTA with warm-paper text, plus quiet text links. Burnt Clay remains the hover and focus accent. Use short color/transform transitions and tactile press feedback. No glow.
 - **Frames:** 1px rules for editorial structure; square or lightly rounded image frames only when they group a real artifact.
 - **Portrait:** Use the supplied portrait in the hero so recruiters meet the candidate before the project diagrams.
 - **Evidence:** Qalbu proof stays compact and repository-backed; it never becomes a fake metric dashboard.
@@ -54,7 +54,7 @@ Use rules, whitespace, and one dark contact block instead of floating cards. No 
 
 - Next.js App Router with static export. Server Components by default; header and reveal wrapper are the only interaction layers.
 - `content/projects/*.mdx` holds case-study evidence. `data/*.ts` holds stable site, experience, principles, and process copy.
-- Primary navigation follows the recruiter scan path: Work, Skills, Experience, Education, About, and Contact. Thinking and process remain available as deeper paths from the page.
+- Primary navigation follows the recruiter scan path: Work, Experience, About, and Contact. Thinking, process, skills, and education remain available in the page narrative.
 - Qalbu preserves the public repository truth and its safety boundary: not therapy, diagnosis, fatwa, or a replacement for trusted people or professionals.
 
 ## 8. Anti-Patterns (Banned)

@@ -20,7 +20,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { slug } = await params;
   const { frontmatter } = getProjectSource(slug);
-  return { title: frontmatter.title, description: frontmatter.summary, ...(process.env.NEXT_PUBLIC_SITE_URL ? { alternates: { canonical: `/work/${slug}` } } : {}), openGraph: { title: frontmatter.title, description: frontmatter.summary, images: [frontmatter.cover] } };
+  return { title: frontmatter.title, description: frontmatter.summary, alternates: { canonical: `/work/${slug}` }, openGraph: { title: frontmatter.title, description: frontmatter.summary, images: [frontmatter.cover] } };
 }
 
 export default async function ProjectPage({ params }: ProjectPageProps) {

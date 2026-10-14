@@ -48,13 +48,13 @@ Use one accent only. Never add neon, purple, gradients, clay shadows, pure black
 
 ## Component rules
 
-- **Primary CTA:** one Burnt Clay fill with white text; tactile press feedback; no glow.
+- **Primary CTA:** one Charcoal Ink fill with warm-paper text; Burnt Clay is reserved for hover and focus; tactile press feedback; no glow.
 - **Secondary links:** quiet text or rule treatment, with a visible underline or arrow label.
 - **Frames:** 1px rules for editorial structure; square or lightly rounded image frames only when they group a real artifact.
 - **Project evidence:** prefer real portrait, authored SVG diagrams, repository-backed proof strips, MDX case studies, limitations, and next steps.
 - **Hero artifact:** use the supplied portrait and clear role facts; project diagrams belong to project sections.
 - **CV control:** one public PDF download; the owner edits the source file and redeploys it.
-- **Navigation:** stable recruiter-scan links for Work, Skills, Experience, Education, About, and Contact, plus a keyboard-usable mobile menu.
+- **Navigation:** stable recruiter-scan links for Work, Experience, About, and Contact, plus a keyboard-usable mobile menu.
 - **Contact conversion:** email remains primary; WhatsApp is a direct secondary route using the owner-supplied number.
 
 ## Interaction and motion
@@ -63,7 +63,7 @@ Use one accent only. Never add neon, purple, gradients, clay shadows, pure black
 - UI transitions stay under 300ms and animate transform, opacity, color, or underline only.
 - Header state uses an IntersectionObserver sentinel rather than a scroll event listener.
 - Respect `prefers-reduced-motion`: remove movement while retaining readable content, color, and focus feedback.
-- Focus indicators use a 2px cobalt outline with visible offset.
+- Focus indicators use a 2px Burnt Clay outline with visible offset.
 
 ## Accessibility and content
 
@@ -71,7 +71,7 @@ Use one accent only. Never add neon, purple, gradients, clay shadows, pure black
 - Every informative image has meaningful `alt`; decorative images use empty `alt`.
 - Do not communicate state by color alone. Status text and labels must remain explicit.
 - Interactive targets are keyboard reachable and touch-friendly; form controls have visible labels.
-- Use Indonesian for the primary narrative and established English technical terms where they are clearer.
+- Use English for the primary narrative and established technical terms where they are clearer.
 - Never invent metrics, responsibilities, awards, outcomes, client claims, or repository capabilities.
 
 ## Anti-patterns

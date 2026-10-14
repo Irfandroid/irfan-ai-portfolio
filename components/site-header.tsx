@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Github, Linkedin, Mail, Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { site } from "@/data/site";
 
@@ -9,6 +10,9 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const sentinelRef = useRef<HTMLSpanElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+  const pathname = usePathname();
+  const isCaseStudy = pathname.startsWith("/work/");
 
   useEffect(() => {
     const sentinel = sentinelRef.current;
@@ -17,6 +21,18 @@ export function SiteHeader() {
     observer.observe(sentinel);
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    if (!open) return;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [open]);
 
   return (
     <>
@@ -30,7 +46,7 @@ export function SiteHeader() {
 
         <nav className={`desktop-nav ${open ? "is-open" : ""}`} aria-label="Primary navigation">
           {site.navigation.map((item) => (
-            <Link key={item.href} href={item.href} onClick={() => setOpen(false)}>{item.label}</Link>
+            <Link key={item.href} href={isCaseStudy ? `/${item.href}` : item.href} onClick={() => setOpen(false)}>{item.label}</Link>
           ))}
         </nav>
 
@@ -44,7 +60,7 @@ export function SiteHeader() {
           <a className="icon-link" href={site.links.email} aria-label="Email">
             <Mail size={17} strokeWidth={1.7} />
           </a>
-          <button className="menu-toggle" type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} aria-label={open ? "Close menu" : "Open menu"}>
+          <button ref={menuButtonRef} className="menu-toggle" type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} aria-label={open ? "Close menu" : "Open menu"}>
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
