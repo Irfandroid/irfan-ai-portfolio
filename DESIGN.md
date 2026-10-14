@@ -36,8 +36,8 @@ Use rules, whitespace, and one dark contact block instead of floating cards. No 
 
 - Use an asymmetric grid inside a 1400px shell.
 - The hero is a publication spread: specific role direction and value statement left, the real portrait and concise facts right.
-- Qalbu leads as a mini technical presentation with a stacked system visualization, a compact proof strip sourced from the repository, evidence notes, and a case-study route.
-- Selected work uses editorial rows. Experience uses chronology. Thinking and process use dividers rather than equal cards.
+- Selected work leads with editorial rows across AI, data, and applied machine learning; Qalbu keeps its deeper technical presentation on its case-study route.
+- Experience uses chronology. Thinking and process use dividers rather than equal cards.
 - No decorative overlaps. Every image, diagram, and text block owns a clear spatial zone.
 - Below 768px, collapse to one column, preserve the narrative order, and prevent horizontal overflow.
 - Spacing follows a practical golden-ratio rhythm: 4, 8, 13, 21, 34, 55, 89, and 144px.

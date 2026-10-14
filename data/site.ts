@@ -3,7 +3,7 @@ import { socialLinks } from "./social-links";
 export const site = {
   name: "Muhamad Irfan Afriyansyah",
   shortName: "Irfan Afriyansyah",
-  description: "Muhamad Irfan Afriyansyah is an AI Engineer in Tangerang focused on RAG, retrieval systems, and LLM applications. Explore Qalbu, an Indonesian Qur'an reflection chat with visible sources, quality gates, and fallbacks.",
+  description: "Muhamad Irfan Afriyansyah is an AI Engineer in Tangerang working across retrieval, machine learning, data annotation, and applied AI systems. Explore selected projects, technical thinking, and public repositories.",
   navigation: [
     { label: "Work", href: "#work" },
     { label: "Experience", href: "#experience" },
@@ -12,11 +12,11 @@ export const site = {
   ],
   hero: {
     title: "AI Engineer.",
-    titleLine: "RAG systems.",
-    titleAccent: "LLM applications.",
-    intro: "I am Muhamad Irfan Afriyansyah, an AI Engineer focused on RAG, retrieval systems, and machine learning.",
-    body: "I build reliable AI systems that connect data, retrieval, evaluation, APIs, and LLMs into inspectable applications.",
-    value: "My work makes retrieval, provenance, fallback behavior, and system boundaries visible.",
+    titleLine: "Applied machine learning.",
+    titleAccent: "Reliable AI systems.",
+    intro: "I am Muhamad Irfan Afriyansyah, an AI Engineer working across retrieval, machine learning, and backend systems.",
+    body: "I connect data quality, model integration, evaluation, APIs, and user-facing prototypes into inspectable applications.",
+    value: "My work turns technical decisions and system boundaries into evidence that people can review.",
     availability: "AI Engineer / LLM Engineer / GenAI Engineer",
   },
   currentFocus: {

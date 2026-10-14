@@ -12,7 +12,7 @@ const metadataBase = new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://irfand
 export const metadata: Metadata = {
   metadataBase,
   title: {
-    default: `${site.name} — AI Engineer | RAG & LLM Applications`,
+    default: `${site.name} — AI Engineer | Machine Learning & Applied AI`,
     template: `%s | ${site.shortName}`,
   },
   description: site.description,

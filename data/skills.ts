@@ -3,7 +3,7 @@ export const currentFocus = [
     index: "01",
     title: "RAG",
     question: "Ground responses in relevant source context.",
-    note: "Qalbu is the primary case study: retrieval, provenance, and generation boundaries.",
+    note: "I validate retrieval, provenance, and generation boundaries in applied AI systems.",
     tone: "clay",
   },
   {

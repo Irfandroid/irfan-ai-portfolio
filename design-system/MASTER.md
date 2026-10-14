@@ -4,7 +4,7 @@
 
 The portfolio helps recruiters, hiring managers, and technical collaborators understand Muhamad Irfan Afriyansyah's direction in AI engineering, machine learning, and dependable data systems within seconds. The interface prioritizes evidence, clarity, and a credible human point of view over decorative novelty.
 
-The fast path is: role direction → Qalbu evidence → inspectable repository → contact. The deep path is: selected work → experience → thinking → process → about.
+The fast path is: role direction → selected work → inspectable repositories → contact. The deep path is: selected work → experience → thinking → process → about.
 
 ## Visual direction
 
@@ -39,7 +39,7 @@ Use one accent only. Never add neon, purple, gradients, clay shadows, pure black
 
 - Use an asymmetric grid inside a centered shell capped at 1400px.
 - The hero is a publication spread: specific role direction and value proposition on the left; the supplied real portrait and concise facts on the right.
-- Qalbu is the lead technical story. Selected work uses evidence-rich rows, not a gallery of equal cards.
+- Selected work is the lead evidence story across multiple projects. Qalbu has the deepest technical case study, while the homepage uses evidence-rich rows rather than equal cards.
 - Use a 4px spacing base, extended by the documented golden-ratio rhythm for section spacing.
 - Below 768px, collapse to one column, keep narrative order, and preserve readable measures. No horizontal overflow.
 - Every visual owns a clear spatial zone; avoid decorative overlaps and absolute-positioned content stacks.
